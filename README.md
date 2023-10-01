@@ -49,7 +49,7 @@ Running lkgpt-service Locally:
 
 ```bash
 # From the lkgpt-service/ directory
-go run /cmd/server/main.go --config config.yaml --gcp-credentials-path gcp-credentials.json`
+go run cmd/server/main.go --config config-sample.yaml --gcp-credentials-path gcp-credentials.json`
 ```
 
 Once both services are running you can navigate to <http://localhost:3000>. There's one more step needed when running locally. When deployed, KITT is spawned via a LiveKit webhook, but locally - the webhook will have no way of reaching your local `lkgpt-service` that's running. So you'll have to manually call an API to spawn KITT:
